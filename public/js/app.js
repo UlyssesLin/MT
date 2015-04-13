@@ -4,7 +4,7 @@ App.config(function($routeProvider, $locationProvider){
 	$routeProvider
 		.when('/',
 		{
-			templateUrl: '/clientviews/partials/login.html',
+			templateUrl: '/clientviews/partials/splash.html',
 		    // controller: 'appController'
 		})
 		.when('/login',

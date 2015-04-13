@@ -12,6 +12,7 @@
         <!-- custom css -->     
         <link rel="stylesheet" type="text/css" href="./stylesheets/template.css">
         <link rel="stylesheet" type="text/css" href="./stylesheets/tailored.css">
+        <link href='http://fonts.googleapis.com/css?family=Crafty+Girls|Raleway' rel='stylesheet' type='text/css'>
         <!-- load external script -->           
         <script src="/socket.io/socket.io.js"></script>
         <script type="text/javascript" src="./js/external/angular.js">
@@ -31,12 +32,22 @@
     </head>
     <body id='app' ng-app='App' ng-controller="appController">
         <div id='layout'>
-            <div>
-                <h1>Mamatomo <- Main layout header</h1>
-                <a href="#/login">Login Partial</a>
-                <a href="#/profile">Profile Partial</a>
+            <div id="navbar">
+                <a href="/">
+                    <h1>mamatomo</h1>
+                </a>
+                <h2>The social network for Eastside moms of all backgrounds.</h2>
+                <a id="login_link" href="#/login">
+                    <div id="login_icon_wrapper">
+                        <img src="../img/roo.png">
+                    </div>
+                    <span>Login</span>
+                </a>
+                <!-- <a href="#/profile">Profile Partial</a> -->
             </div>
-            <div ng-view=""></div>
+            <div ng-view="">
+<!-- PARTIALS GO HERE -->
+            </div>
         </div>
     </body>
 </html>
