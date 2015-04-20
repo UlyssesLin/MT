@@ -1,3 +1,30 @@
-<div id="profile">
-	<div>Sample signup page here</div>
+<div id="signup">
+	<div>
+		<form id="registration_form" name="reg_form" ng-submit="reg_form.$valid && makeNewUser(new_user)" novalidate>
+		<!-- Name -->
+		<h2>Hello!</h2>
+			<p>
+			{{reg_form.$valid}}
+			<label>My name is </label>
+			<input type="text" name="first_name" placeholder="First Name" ng-model="new_user.first_name" required>
+			<input type="text" name="last_name" placeholder="Last Name" ng-model="new_user.last_name" required>
+			<label>, but I would like to be called </label>
+		<!-- Username -->
+			<input type="text" name="username" placeholder="Username" ng-model="new_user.username" required>
+			<button>Click to Generate Random Username</button><br>
+			<label> in the mamatomo family!</label><br>
+			</p>
+		<!-- Email -->
+			<p>
+			<label>My email address is at </label>
+			<input type="text" name="email" placeholder="Email" ng-model="new_user.email" required>
+		<!-- City -->
+			<label> and I live in </label>
+			<input type="text" name="city" placeholder="City" ng-model="new_user.city" required>
+			<label>.</label>
+			</p>
+			<p>Mamatomo respects your privacy. Only your username will be public, though after sign up you can choose to show more information if you like!</p>
+			<input type="submit" value="Submit!" ng-class="{'opaque':!reg_form.$valid}" ng-disabled="!reg_form.$valid">
+		</form>
+	</div>
 </div>

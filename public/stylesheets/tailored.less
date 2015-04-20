@@ -8,6 +8,26 @@ body{
 .slightly_rounded{
 	border-radius: 0.25em;
 }
+.bg{
+	min-height: 720px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+button,input[type='submit']{
+	cursor: pointer;
+}
+.button{
+	height: 2em;
+	box-shadow: 0 5px 0 rgb(1,101,153);
+	color: white;
+	background-color: rgb(1,135,204);
+	padding: 0px 10px;
+	.slightly_rounded;
+}
+button.opaque,input[type='submit'].opaque{
+	opacity: 0.5;
+	cursor: not-allowed;
+}
 a{
 	text-decoration: none;
 	color: white;
@@ -61,9 +81,7 @@ a{
 /*SPLASH*/
 #splash{
 	background-image: url("../img/splash_bg.jpg");
-	min-height: 720px;
-	background-position: center;
-	background-repeat: no-repeat;
+	.bg;
 	font-weight: 300;
 	h1{
 		font-size: 42px;
@@ -82,13 +100,46 @@ a{
 			font-size: 150%;
 		}
 		button{
+			.button;
 			width: 50%;
-			height: 2em;
 			margin: 1em 0em;
-			background-color: rgb(1,135,204);
-			box-shadow: 0 5px 0 rgb(1,101,153);
-			color: white;
-			.slightly_rounded;
+		}
+	}
+}
+#signup{
+	background-image: url("../img/signup_bg.jpg");
+	background-size: 100% auto;
+	.bg;
+	div{
+		min-height: 720px;
+		/*background-color: rgba(255,137,137,0.3);*/
+		background-color: rgba(161,202,241,0.8);
+		form{
+			/*float: right;*/
+			width: 600px;
+			padding: 20px;
+			margin: 0px auto;
+			h2{
+				font-size: 3em;
+			}
+			p{
+				padding-bottom: 1em;
+			}
+			label{
+				line-height: 1.5em;
+			}
+			input[type='text']{
+				padding-left: 5px;
+			}
+			input[type='submit']{
+				.button;
+			}
+			button{
+				height: 1.5em;
+				background-color: rgb(0,153,204);
+				padding: 0px 10px;
+				.slightly_rounded;
+			}
 		}
 	}
 }

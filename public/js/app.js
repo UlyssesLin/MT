@@ -7,6 +7,11 @@ App.config(function($routeProvider, $locationProvider){
 			templateUrl: '/clientviews/partials/splash.html',
 		    // controller: 'appController'
 		})
+		.when('/signup',
+		{
+			templateUrl: '/clientviews/partials/signup.html',
+		    // controller: 'appController'
+		})
 		.when('/login',
 		{
 			templateUrl: '/clientviews/partials/login.html',
